@@ -1,0 +1,16 @@
+﻿<Window x:Class="WpfGameMini.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="WPF Game Mini" Height="600" Width="400">
+    <Grid>
+        <Canvas Background="LightBlue" Name="MainCanvas" KeyDown="onPressKeyDown" KeyUp="onPressKeyUp" Focusable="True">
+            <Image x:Name="clouds" Height="150" Width="150" Source="images/clouds.png" Canvas.Left="20" Canvas.Top="20" Tag="CLOUDS"/>
+            <Image x:Name="clouds2" Height="150" Width="150" Source="images/clouds2.png" Canvas.Left="20" Canvas.Top="370" Tag="CLOUDS"/>
+            <Image x:Name="clouds3" Height="150" Width="150" Source="images/clouds3.png" Canvas.Left="200" Canvas.Top="180" Tag="CLOUDS"/>
+            <Image Stretch="Fill" Name="player" Height="50" Width="50" Source="images/player.png" Canvas.Left="175" Canvas.Top="400" />
+            <Label Name="scoreText" Content="Score: 0" FontSize="18" FontWeight="Bold" Foreground="White"/>
+        </Canvas>
+        <Image x:Name="GameOver" Height="150" Width="150" Source="images/gameOver.png" Visibility="Hidden"/>
+        <Image x:Name="GameReady" Height="150" Width="150" Source="images/getReady.png" Visibility="Visible"/>
+    </Grid>
+</Window>
